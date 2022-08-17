@@ -2,7 +2,7 @@
 //  ContentView.swift
 //  WarChallenge
 //
-//  Created by rehnuma.deepty on 16/8/22.
+//  Created by Rehnuma Reza on 16/8/22.
 //
 
 import SwiftUI
@@ -14,8 +14,67 @@ struct ContentView: View {
                 .ignoresSafeArea()
             
             VStack {
+                Spacer()
+                
                 Image("logo")
                     .aspectRatio(contentMode: .fit)
+                
+                Spacer()
+                
+                HStack {
+                    Image("card3")
+                        .aspectRatio(contentMode: .fit)
+                        .padding()
+                    Image("card2")
+                        .aspectRatio(contentMode: .fit)
+                        .padding()
+                    
+                }
+                
+                Spacer()
+                
+                Image("dealbutton").padding()
+                
+                Spacer()
+                
+                HStack {
+                    
+                    Spacer()
+                    
+                    VStack {
+                        
+                        Text("Player")
+                            .foregroundColor(Color.white)
+                            .bold()
+                            .padding(.bottom, 10.0)
+                            .font(.headline)
+                        Text("0")
+                            .foregroundColor(Color.white)
+                            .bold()
+                            .font(.headline)
+                        
+                        
+                    }
+                    
+                    Spacer()
+                    
+                    VStack {
+                        Text("CPU")
+                            .foregroundColor(Color.white)
+                            .bold()
+                            .padding(.bottom, 10.0)
+                            .font(.headline)
+                        Text("0")
+                            .foregroundColor(Color.white)
+                            .bold()
+                            .font(.headline)
+                        
+                    }
+                    Spacer()
+                    
+                }
+                
+                Spacer()
                 
             }
         }
