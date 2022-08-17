@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF8A5BBE28ACB35F00A4DC43 /* String+Replace.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8A5BBD28ACB35F00A4DC43 /* String+Replace.swift */; };
 		BFA897AF28ABA07200D530D3 /* WarChallengeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA897AE28ABA07200D530D3 /* WarChallengeApp.swift */; };
 		BFA897B128ABA07200D530D3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA897B028ABA07200D530D3 /* ContentView.swift */; };
 		BFA897B328ABA07400D530D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFA897B228ABA07400D530D3 /* Assets.xcassets */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BF8A5BBD28ACB35F00A4DC43 /* String+Replace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Replace.swift"; sourceTree = "<group>"; };
 		BFA897AB28ABA07200D530D3 /* WarChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WarChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFA897AE28ABA07200D530D3 /* WarChallengeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarChallengeApp.swift; sourceTree = "<group>"; };
 		BFA897B028ABA07200D530D3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -71,6 +73,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BF8A5BBC28ACB33200A4DC43 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				BF8A5BBD28ACB35F00A4DC43 /* String+Replace.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		BFA897A228ABA07200D530D3 = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +104,7 @@
 		BFA897AD28ABA07200D530D3 /* WarChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				BF8A5BBC28ACB33200A4DC43 /* Extension */,
 				BFA897AE28ABA07200D530D3 /* WarChallengeApp.swift */,
 				BFA897B028ABA07200D530D3 /* ContentView.swift */,
 				BFA897B228ABA07400D530D3 /* Assets.xcassets */,
@@ -258,6 +269,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BFA897B128ABA07200D530D3 /* ContentView.swift in Sources */,
+				BF8A5BBE28ACB35F00A4DC43 /* String+Replace.swift in Sources */,
 				BFA897AF28ABA07200D530D3 /* WarChallengeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

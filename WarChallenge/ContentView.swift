@@ -8,6 +8,12 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State var playerCard = "card2"
+    @State var cpuCard = "card9"
+    @State var playerScore = 0
+    @State var cpuScore = 0
+    
     var body: some View {
         ZStack {
             Image("background")
@@ -22,10 +28,10 @@ struct ContentView: View {
                 Spacer()
                 
                 HStack {
-                    Image("card3")
+                    Image(playerCard)
                         .aspectRatio(contentMode: .fit)
                         .padding()
-                    Image("card2")
+                    Image(cpuCard)
                         .aspectRatio(contentMode: .fit)
                         .padding()
                     
@@ -34,12 +40,23 @@ struct ContentView: View {
                 Spacer()
                 
                 Button {
-                    //
+                    // Update score
+                    let playerCardNo = getCardNumber(from: playerCard)
+                    let cpuCardNo = getCardNumber(from: cpuCard)
+                    
+                    if playerCardNo > cpuCardNo {
+                        playerScore += 1
+                    } else if playerCardNo < cpuCardNo {
+                        cpuScore += 1
+                    }
+                    
+                    // Update cards for the next round
+                    playerCard = "card" + String(randomNumber)
+                    cpuCard = "card" + String(randomNumber)
+                    
                 } label: {
                     Image("dealbutton")
                 }
-
-                //Image("dealbutton").padding()
                 
                 Spacer()
                 
@@ -54,7 +71,7 @@ struct ContentView: View {
                             .bold()
                             .padding(.bottom, 10.0)
                             .font(.headline)
-                        Text("0")
+                        Text(String(playerScore))
                             .foregroundColor(Color.white)
                             .bold()
                             .font(.headline)
@@ -70,7 +87,7 @@ struct ContentView: View {
                             .bold()
                             .padding(.bottom, 10.0)
                             .font(.headline)
-                        Text("0")
+                        Text(String(cpuScore))
                             .foregroundColor(Color.white)
                             .bold()
                             .font(.headline)
@@ -85,6 +102,15 @@ struct ContentView: View {
             }
         }
         
+    }
+    
+    var randomNumber: Int {
+        Int.random(in: 2...14)
+    }
+    
+    func getCardNumber(from card: String) -> Int {
+        return Int(card.replacingOccurrences(of: "card",
+                                  with: ""))!
     }
 }
 
