@@ -33,7 +33,13 @@ struct ContentView: View {
                 
                 Spacer()
                 
-                Image("dealbutton").padding()
+                Button {
+                    //
+                } label: {
+                    Image("dealbutton")
+                }
+
+                //Image("dealbutton").padding()
                 
                 Spacer()
                 
